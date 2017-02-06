@@ -31,7 +31,9 @@ def init():
     try: 
         # Initialize node
         import rospy
-        rospy.init_node('pybot_vision_draw_utils_node', anonymous=True, disable_signals=True)
+        
+        #implicit init node is causing problems
+        #rospy.init_node('pybot_vision_draw_utils_node', anonymous=True, disable_signals=True)
 
         global viz_pub_
         viz_pub_ = VisualizationMsgsPub()
